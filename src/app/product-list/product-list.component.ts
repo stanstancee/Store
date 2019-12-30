@@ -9,9 +9,13 @@ import { products } from '../products';
 })
 export class ProductListComponent {
   products = products;
+  alertSpace ="";
 
   share() {
     window.alert('The product has been shared!');
+  }
+  onNotify(message):void {
+    this.alertSpace = `message: ${message}`
   }
 }
 
