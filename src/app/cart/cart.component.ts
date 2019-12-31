@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CartService} from '../cart.service'
+import {CartService} from '../cart.service';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -13,5 +13,16 @@ export class CartComponent implements OnInit {
   ngOnInit() {
     this.items = this.cartService.getItems()
   }
+ onClear(){
+  this.items =this.cartService.clearCart();
+    console.log(this.items)
+  return this.items;
 
+ }
+ onDelete(){
+this.cartService.deleteItem();
+return this.items
+
+
+ }
 }
