@@ -1,8 +1,13 @@
-<a [routerLink]="['/']">
+<a  [routerLink]="['/']">
   <h1>Stan Shop</h1>
 </a>
 
-<a [routerLink]="['/cart']" class="button fancy-button"><i class="material-icons">shopping_cart</i>Checkout</a>
+<a [routerLink]="['/cart']" class="button fancy-button">
+<aside *ngIf =  "items.length>0">
+<span >{{itemNumber}}</span>
+</aside>
+<i class="material-icons">shopping_cart</i>Checkout</a>
+
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
