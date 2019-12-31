@@ -23,22 +23,31 @@ export class CartComponent implements OnInit {
  onDelete(){
 this.cartService.deleteItem();
 this.itemNumber = this.itemNumber - 1;
+this.see(this.itemNumber)
+
 return this.items
 
 
  }
  itemNumber = this.cartService.ItemsNumber();
-  see(){
-  let  item1 = 'item';
-  let  item2 = 'items';
-  if(this.itemNumber>1){
-    return item2;
+
+  see(itemNumber){
+  
+
+     if(itemNumber>1){
+      
+    return 'items';
     }
     else{
-      return item1
+      return 'item'
+
     }
+   
+   
+  
+ 
   }
-  word = this.see 
+ 
   }
  
 
