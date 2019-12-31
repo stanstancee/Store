@@ -8,6 +8,7 @@ import {CartService} from '../cart.service';
 export class CartComponent implements OnInit {
 
   constructor(private cartService: CartService) { }
+
   items:any
 
   ngOnInit() {
@@ -21,8 +22,26 @@ export class CartComponent implements OnInit {
  }
  onDelete(){
 this.cartService.deleteItem();
+this.itemNumber = this.itemNumber - 1;
 return this.items
 
 
  }
-}
+ itemNumber = this.cartService.ItemsNumber();
+  see(){
+  let  item1 = 'item';
+  let  item2 = 'items';
+  if(this.itemNumber>1){
+    return item2;
+    }
+    else{
+      return item1
+    }
+  }
+  word = this.see 
+  }
+ 
+
+  
+  
+ 
