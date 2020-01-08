@@ -14,7 +14,10 @@ export class TopBarComponent implements OnInit {
   ngOnInit() {
     this.items = this.cartService.getItems()
   }
-itemNumber = this.cartService.ItemsNumber();
+itemNumber(){
+  return this.cartService.ItemsNumber();
+} 
+
 }
 
 

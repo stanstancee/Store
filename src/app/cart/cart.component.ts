@@ -14,19 +14,19 @@ export class CartComponent implements OnInit {
   ngOnInit() {
     this.items = this.cartService.getItems()
   }
-//  onClear(){
-//   this.items =this.cartService.clearCart();
-//     console.log(this.items)
-//   return this.items;
+  onClear(){
+  this.items =this.cartService.clearCart();
+console.log(this.items)
+   return this.items;
 
-//  }
-//  onDelete(){
-// this.cartService.deleteItem();
-// this.itemNumber = this.itemNumber - 1;
-// return this.items
+  }
+  onDelete(){
+ this.cartService.deleteItem();
+ this.itemNumber = this.itemNumber - 1;
+ return this.items
 
 
- //}
+ }
  itemNumber = this.cartService.ItemsNumber();
 
   see(itemNumber){

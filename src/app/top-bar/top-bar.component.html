@@ -4,7 +4,7 @@
 
 <a [routerLink]="['/cart']" class="button fancy-button">
 <aside *ngIf =  "items.length>0">
-<span >{{itemNumber}}</span>
+<span >{{itemNumber()}}</span>
 </aside>
 <i class="material-icons">shopping_cart</i>Checkout</a>
 
